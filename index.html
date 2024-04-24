@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO² Vision</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <!-- Eigene CSS-Datei -->
+    <link rel="stylesheet" href="styles.css">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="ECO² Vision">
+      </a>
+      <!-- Header-Content -->
+      <div class="header-content">
+        <h2>Willkommen bei ECO² Vision</h2>
+        <p>Verschafft dir den Überblick!</p>
+      </div>
+      <!-- Navbar toggler button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> <!-- align to right -->
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Startseite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Über uns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Unterstütze unsere VISION</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Button to toggle side menu -->
+  <button id="sideMenuToggle" class="btn btn-success position-fixed top-50 start-0 translate-middle-y">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<!-- Side menu -->
+<div id="sideMenu" class="position-fixed top-50 translate-middle-y collapse"> <!-- Initially collapsed -->
+  <ul class="list-group">
+    <li class="list-group-item"><a href="#">Hier ist ein cooler Link!</a></li>
+    <li class="list-group-item"><a href="#">Auch nicht schlecht!</a></li>
+    <li class="list-group-item"><a href="#">Der hier ist ganz okay.</a></li>
+  </ul>
+</div>
+
+  
+<div class="container">
+  <!-- Content goes here -->
+  <h3>CO²-Emissionsdaten</h3>
+    <table id="emissionsTable" class="table table-hover"><!--Table Hover für Schönheit-->
+      <thead>
+        <tr>
+          <th>Land</th>
+          <th>Unternehmen</th>
+          <th>CO²-Emissionen (kt)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Hier werden die Daten dynamisch eingefügt -->
+      </tbody>
+    </table>
+  </div>
+</div>
+  
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+      <span class="text-muted">© 2024 Meine Webseite. Alle Rechte vorbehalten.</span>
+      <!-- Zusätzliche Punkte im Footer -->
+      <a class="text-muted mx-3" href="#">Impressum</a>
+      <a class="text-muted mx-3" href="#">Datenschutzerklärung</a>
+      <!-- Fügen Sie weitere Punkte nach Bedarf hinzu -->
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables JavaScript -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <!-- Eigene JavaScript-Datei -->
+  <script src="script.js"></script>
+</body>
+</html>

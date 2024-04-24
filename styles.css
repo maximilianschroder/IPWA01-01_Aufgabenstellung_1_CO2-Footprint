@@ -1,0 +1,75 @@
+.navbar-brand img {
+    max-width: 125px; /* Maximalbreite des Logos */
+    height: auto; /* Automatische Anpassung der Höhe */
+  }
+
+/* Ändere die Größe und Farbe der Punkte */
+.navbar-nav .nav-link {
+  font-size: 20px; /* Größe der Punkte */
+  color: green; /* Farbe der Punkte */
+}
+
+/* Ändere das Aussehen des aktiven Punktes */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link:hover {
+  color: #69a769; /* Helleres Grün für den aktiven Punkt */
+}
+
+.header-content {
+  flex-grow: 1; /* Damit der Header-Content den verfügbaren Platz einnimmt */
+  text-align: left; /* Zentriert den Text horizontal */
+}
+
+/* Änderungen für den Header-Content in der Mobilansicht */
+@media (max-width: 768px) {
+  .header-content {
+    display: flex; /* Flexbox verwenden */
+    flex-direction: column; /* In Spalten anordnen */
+    align-items: flex-start; /* Am Anfang der Spalte ausrichten */
+  }
+
+  .header-content h2 {
+    font-size: 20px; /* Kleinere Schriftgröße für die Überschrift */
+    margin: 0; /* Außenabstände entfernen */
+  }
+
+  .header-content p {
+    font-size: 12px; /* Kleinere Schriftgröße für den Untertitel */
+    margin: 0; /* Außenabstände entfernen */
+  }
+
+  .header-content p {
+    font-size: 16px; /* Kleinere Schriftgröße für den Untertitel */
+  }
+  .navbar-brand img {
+    max-width: 80px; /* Maximalbreite des Logos */
+    height: auto; /* Automatische Anpassung der Höhe */
+  }
+}
+
+
+
+#sideMenu {
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Adjust position of side menu based on document direction */
+[dir="rtl"] #sideMenu {
+  right: 0;
+}
+
+[dir="ltr"] #sideMenu {
+  left: 0;
+}
+
+/* Stile für das Burger-Menüsymbol */
+#sideMenuToggle .navbar-toggler-icon {
+  width: 15px; /* Breite des Symbols anpassen */
+  height: 34px; /* Höhe des Symbols anpassen */
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Stile für den Seitenmenü-Button */
+#sideMenuToggle {
+  z-index: 1000; /* Stellen Sie sicher, dass der Button über anderen Inhalten liegt */
+}
