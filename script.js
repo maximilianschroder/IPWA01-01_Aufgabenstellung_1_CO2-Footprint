@@ -27,25 +27,32 @@ $(document).ready(function() {
     { land: 'Germany', unternehmen: 'Company X', emissionen: 290 },
     { land: 'South Africa', unternehmen: 'Company Y', emissionen: 170 },
     { land: 'South Africa', unternehmen: 'Company Z', emissionen: 220 }
-    // Add more data objects as needed
   ];
 
-   // Get a reference to the table body element
    const tableBody = document.querySelector('#emissionsTable tbody');
 
-   // Loop through the data and create table rows dynamically
+   // Schleife um Tabellenzeilen zu generieren und befüllen
    emissionsData.forEach((data) => {
-     const row = document.createElement('tr');
-     row.innerHTML = `
-       <td>${data.land}</td>
-       <td>${data.unternehmen}</td>
-       <td>${data.emissionen}</td>
-     `;
-     tableBody.appendChild(row);
-   });
+    const row = document.createElement('tr');
+
+    const cellLand = document.createElement('td');
+    cellLand.textContent = data.land;
+    row.appendChild(cellLand);
+
+    const cellUnternehmen = document.createElement('td');
+    cellUnternehmen.textContent = data.unternehmen;
+    row.appendChild(cellUnternehmen);
+
+    const cellEmissionen = document.createElement('td');
+    cellEmissionen.textContent = data.emissionen;
+    row.appendChild(cellEmissionen);
+
+    tableBody.appendChild(row);
+});
 
   const dataTable = $('#emissionsTable').DataTable({
     data: emissionsData,
+    render: DataTable.render.text(),
     columns: [
       { data: 'land' },
       { data: 'unternehmen' },
@@ -70,7 +77,7 @@ $(document).ready(function() {
     }
   });
 
-  // Add dropdown filters for country and company
+  // Dropdown Filter
   $('#emissionsTable').DataTable().columns([0, 1]).every(function () {
     const column = this;
     const select = $('<select><option value=""></option></select>')
@@ -89,19 +96,12 @@ $(document).ready(function() {
   });
 });
 
-// Determine side menu position based on document direction
-if (document.dir === 'rtl') {
-  document.getElementById('sideMenu').classList.add('menu-left');
-} else {
-  document.getElementById('sideMenu').classList.add('menu-right');
-}
-
-//toggle the side menu on click
+//Menü mit lokalen Links toggle
 $('#sideMenuToggle').click(function(){
   $('#sideMenu').collapse('toggle');
 });
 
-//close the side menu when clicking outside
+//Schließen bei klick außerhalb
 $(document).on('click', function (e) {
   if (!$(e.target).closest('#sideMenu').length && !$(e.target).closest('#sideMenuToggle').length) {
     $('#sideMenu').collapse('hide');
