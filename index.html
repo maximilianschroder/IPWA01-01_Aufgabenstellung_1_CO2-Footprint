@@ -30,7 +30,7 @@
       </button>      
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto"> <!-- align to right -->
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="index.html">Startseite</a>
           </li>
@@ -48,12 +48,12 @@
     </nav>
   </header>
   
-  <!-- Button to toggle side menu -->
+  <!-- Toggle für Menü mit lokalen Links -->
   <button id="sideMenuToggle" class="btn btn-success position-fixed top-50 start-0 translate-middle-y">
     <span class="navbar-toggler-icon"></span>
   </button>
-<!-- Side menu -->
-<div id="sideMenu" class="position-fixed top-50 translate-middle-y collapse"> <!-- Initially collapsed -->
+<!-- Menü -->
+<div id="sideMenu" class="position-fixed top-50 translate-middle-y collapse" dir="auto"> <!-- Initially collapsed -->
   <ul class="list-group">
     <li class="list-group-item"><a href="#">Hier ist ein cooler Link!</a></li>
     <li class="list-group-item"><a href="#">Auch nicht schlecht!</a></li>
@@ -61,9 +61,8 @@
   </ul>
 </div>
 
-  
+<!-- Emissionsdaten -->
 <div class="container">
-  <!-- Content goes here -->
   <h3>CO²-Emissionsdaten</h3>
     <table id="emissionsTable" class="table table-hover"><!--Table Hover für Schönheit-->
       <thead>
@@ -74,7 +73,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Hier werden die Daten dynamisch eingefügt -->
+        <!-- Daten dynamisch einfügen -->
       </tbody>
     </table>
   </div>
@@ -82,11 +81,10 @@
   
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container text-center">
-      <span class="text-muted">© 2024 Meine Webseite. Alle Rechte vorbehalten.</span>
-      <!-- Zusätzliche Punkte im Footer -->
-      <a class="text-muted mx-3" href="#">Impressum</a>
-      <a class="text-muted mx-3" href="#">Datenschutzerklärung</a>
-      <!-- Fügen Sie weitere Punkte nach Bedarf hinzu -->
+      <span class="text-muted">© 2024 ECO² Vision - alle Rechte vorbehalten.</span>
+      <a class="text-muted mx-3" href="index.html">Impressum</a>
+      <a class="text-muted mx-3" href="index.html">Datenschutzerklärung</a>
+      <a class="text-muted mx-3" href="index.html">Cookies</a>
     </div>
   </footer>
 
