@@ -1,18 +1,17 @@
 .navbar-brand img {
-    max-width: 125px; /* Maximalbreite des Logos */
-    height: auto; /* Automatische Anpassung der Höhe */
+    max-width: 125px;
+    height: auto;
   }
 
-/* Ändere die Größe und Farbe der Punkte */
 .navbar-nav .nav-link {
-  font-size: 20px; /* Größe der Punkte */
-  color: green; /* Farbe der Punkte */
+  font-size: 20px;
+  color: green;
 }
 
-/* Ändere das Aussehen des aktiven Punktes */
+/* Ändere Aussehen des aktiven und hover Punktes */
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item .nav-link:hover {
-  color: #69a769; /* Helleres Grün für den aktiven Punkt */
+  color: #69a769;
 }
 
 .header-content {
@@ -20,7 +19,6 @@
   text-align: left; /* Zentriert den Text horizontal */
 }
 
-/* Änderungen für den Header-Content in der Mobilansicht */
 @media (max-width: 768px) {
   .header-content {
     display: flex; /* Flexbox verwenden */
@@ -47,13 +45,11 @@
   }
 }
 
-
-
 #sideMenu {
-  z-index: 1000; /* Ensure it's on top of other elements */
+  z-index: 1000;
 }
 
-/* Adjust position of side menu based on document direction */
+/* Menü links oder rechts, je nach Schriftkultur der Besucher */
 [dir="rtl"] #sideMenu {
   right: 0;
 }
@@ -62,14 +58,12 @@
   left: 0;
 }
 
-/* Stile für das Burger-Menüsymbol */
 #sideMenuToggle .navbar-toggler-icon {
-  width: 15px; /* Breite des Symbols anpassen */
-  height: 34px; /* Höhe des Symbols anpassen */
+  width: 15px;
+  height: 34px;
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
 }
 
-/* Stile für den Seitenmenü-Button */
 #sideMenuToggle {
-  z-index: 1000; /* Stellen Sie sicher, dass der Button über anderen Inhalten liegt */
+  z-index: 1000;
 }
